@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+body{
+    min-height: 100vh;
+    background: url(../image/wallpapersden.com_starry-landscape-4k-cool-blue-moon_3840x2160.jpg)
+    no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+   width: 90%;
+   max-width: 400px;
+   max-height: 580px;
+   padding: 2rem;
+   flex-direction: column;
+   display: flex;
+   gap: 30px;
+   color: white;
+   border-radius: 20px;
+   box-shadow: 0 0 100px rgba(0, 0, 0, 0.5);
+   border: 3px solid ragba(255, 255, 255, 0.18);
+   backdrop-filter: blur(10px);
+}
+.head{
+    padding-bottom: 15px;
+    border-bottom: solid 1.5px white;
+    cursor: pointer;
+}
+.create-todo{
+    border: none;
+    margin: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    min-height: 35px;
+    cursor: pointer;
+}
+.create-todo input{
+    width: 85%;
+    padding: 0 10px;
+    background: white;
+    border-radius: 6px;
+    border: none;
+    border-color: blue;
+}
+.create-todo input:focus{
+    outline: solid 3px white;
+}
+.create-todo button{
+    width: 35px;
+    border-radius: 6px;
+    background: rgb(0, 162, 255);
+    color: white;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+}
+.create-todo button:hover{
+    transform: scale(1.1);
+    background: rgb(0, 162, 255);
+}
+.task-list{
+    overflow-y: auto;
+}
+.task-list::-webkit-scrollbar{
+    width: 0;
+}
+.task{
+    display: flex;
+    gap: 8px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 0;
+}
+.task span{
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.task .check-btn{
+    width: 20px;
+    height: 20px;
+    border: solid 1.5px rgb(0, 162, 255);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+}
+.task .check-btn i {
+    font-size: 16px;
+    cursor: pointer;
+    color: white;  
+}
+.task .delete-btn{
+    font-size: 20px;
+    background: none;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    border: none;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+}
+.task .delete-btn:hover{
+    background: rgb(118, 118, 121);
+    color: rgb(13, 146, 255);
+    transform: scale(1.0);
+}
+.footer{
+    padding-top: 20px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 15px;
+    border-top: solid 1.5px white;
+}
+.footer button{
+    background: rgba(0, 195, 255, 0.719);
+    color: white;
+    padding: 8px;
+    border-radius: 6px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+}
+.footer button:hover{
+    transform: scale(1.1);
+    background:rgb(0, 195, 255);
+}
+.task.true .check-btn{
+    background:  rgba(0, 195, 255, 0.719);
+}
+.task.true span{
+    text-decoration: line-through;
+    color: white;
+}
+.task.true delete-btn{
+    opacity: 8.7;
+}
